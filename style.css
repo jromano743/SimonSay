@@ -1,0 +1,175 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*
+    Paleta de colores: https://colorhunt.co/palette/207331
+*/
+html{
+    font-size: 62.5%;;
+}
+
+body {
+    margin: 0;
+    background: #fcdab7;
+    align-items: center;
+    height: 100vh;
+}
+
+h1{
+    font-size: 4rem;
+    font-family: serif;
+}
+
+.container{
+    display: flex;
+    height: inherit;
+}
+
+.main{
+    flex: 0 0 75%;
+}
+
+.aside{
+    flex: 0 0 25%;
+}
+
+.footer{
+    padding-top: 3rem 0;
+    font-size: 5rem;
+    margin-top: auto;
+    background-color: lightseagreen;
+}
+
+.aside-conteiner{
+    margin-top: 3rem;
+    padding: 6rem 0;
+    border-radius: 3rem;
+    background-color: lawngreen;
+}
+
+.gamestats-container{
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+}
+
+.gamestats-item{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem auto;
+    padding: 1rem 0rem;
+}
+
+/*  STATS   */
+
+#game-stat__title{
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+}
+
+/*  HEADER  */
+.page-header{
+    background-color: #1e5f74;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title{
+    font-size: 4rem;
+    font-family: serif;
+}
+
+.nav{
+    margin-top: 1rem;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#main-nav li{
+    font-size: 1.6rem;
+    display: inline;
+}
+
+/*  GAME BOARD */
+.gameboard {
+    height: 200vh;
+    width: 200vh;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    margin: 5rem auto;
+    max-height: 80vh;
+    max-width: 80vh;
+}
+
+.color {
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: left;
+}
+
+.celeste {
+    background: #22a6b3;
+}
+
+.celeste.light {
+    background: #7ed6df;
+}
+
+.violeta {
+    background: #be2edd;
+}
+
+.violeta.light {
+    background: #e056fd;
+}
+
+.naranja {
+    background: #f0932b;
+}
+
+.naranja.light {
+    background: #ffbe76;
+}
+
+.verde {
+    background: #6ab04c;
+}
+
+.verde.light {
+    background: #badc58;
+}
+
+.btn-start {
+    width: 40rem;
+    height: 10rem;
+    background: #ecf0f1;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    position: absolute;
+    top: calc(50% - 5rem);
+    left: calc(50% - 20rem);
+}
+
+/* Utilities */
+.hide {
+    display: none;
+}

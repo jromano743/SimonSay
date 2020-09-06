@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simon Dice</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <h1 id="page-title" class="title">Simon Say</h1>
+      <nav id="main-nav" class="nav">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Me</a></li>
+          <li><a href="">Instruccions</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="container">
+      <main class="main">
+        <div class="gameboard">
+          <div id="celeste" class="color celeste left" data-color="celeste"></div>
+          <div id="violeta" class="color violeta right" data-color="violeta"></div>
+          <div id="naranja" class="color naranja left" data-color="naranja"></div>
+          <div id="verde" class="color verde right" data-color="verde"></div>
+          <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
+        </div>
+      </main>
+      <aside class="aside">
+        <div class="aside-conteiner">
+          <p id="game-stat__title">Symon Say</p>
+          <div class="gamestats-container">
+            <p id="game-stat__level" class="gamestats-item">Nivel 0</p>
+            <p id="game-stat__score"class="gamestats-item">Placeholder</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+    <footer class="footer">
+      asdas
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
