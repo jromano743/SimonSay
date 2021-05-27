@@ -13,7 +13,7 @@ html{
 
 body {
     margin: 0;
-    background: #fcdab7;
+    background: #18222c;
     align-items: center;
     height: 100vh;
 }
@@ -29,11 +29,11 @@ h1{
 }
 
 .main{
-    flex: 0 0 75%;
+    flex: 0 0 60%;
 }
 
 .aside{
-    flex: 0 0 25%;
+    flex: 0 0 40%;
 }
 
 .footer{
@@ -44,10 +44,12 @@ h1{
 }
 
 .aside-conteiner{
-    margin-top: 3rem;
+    width: 40rem;
+    margin: 5rem auto;
     padding: 6rem 0;
     border-radius: 3rem;
-    background-color: lawngreen;
+    background-color: #ecf0f1;
+    color: #2c3e50;
 }
 
 .gamestats-container{
@@ -77,11 +79,13 @@ h1{
 
 /*  HEADER  */
 .page-header{
-    background-color: #1e5f74;
-    padding: 1rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 1rem;
+}
+
+.page-header h1{
+    text-align: center;
 }
 
 .title{

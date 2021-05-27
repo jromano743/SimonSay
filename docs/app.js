@@ -17,6 +17,12 @@ const ULTIMO_NIVEL = 10
 
 class Juego {
     constructor() {
+        //Sounds
+        this.sonidoCeleste = new Audio('./assets/sound1.wav')
+        this.sonidoVioleta = new Audio('./assets/sound2.wav')
+        this.sonidoNaranja = new Audio('./assets/sound3.wav')
+        this.sonidoVerde = new Audio('./assets/sound4.wav')
+        console.log(this.sonidoCeleste)
         this.inicializar()
         this.generarSecuencia()
         setTimeout(this.siguienteNivel, 500)
@@ -26,7 +32,6 @@ class Juego {
         this.siguienteNivel = this.siguienteNivel.bind(this)
         this.elegirColor = this.elegirColor.bind(this)
         this.inicializar = this.inicializar.bind(this)
-        //btnEmpezar.classList.add('hide')
         this.toggleBtnEmpezar()//Interruptor de la visualizacion del boton
         this.nivel = 1
         statLevel.textContent = `Nivel ${this.nivel}`
@@ -58,7 +63,7 @@ class Juego {
 
     transformarNumeroAColor(numero){
         switch(numero){
-             case 0: 
+            case 0: 
                 return 'celeste'
             case 1: 
                 return 'violeta'
@@ -85,13 +90,31 @@ class Juego {
     iluminarSecuencia(){
         for(let i=0;i<this.nivel;i++){
             let color = this.transformarNumeroAColor(this.secuencia[i])
-            setTimeout(() => this.iluminarColor(color), 1000 * i)
+            setTimeout(() => {
+                this.iluminarColor(color)
+            }, 1000 * i)
+        }
+    }
+
+    reproducirSonido(color){
+        switch(color){
+            case 'celeste': 
+                this.sonidoCeleste.play()
+            case 'violeta': 
+                this.sonidoVioleta.play()
+            case 'naranja': 
+                this.sonidoNaranja.play()
+            case 'verde': 
+                this.sonidoVerde.play()
         }
     }
 
     iluminarColor(color){
         this.colores[color].classList.add('light')
-        setTimeout(() => this.apagarColor(color), 350)
+        setTimeout(() => {
+            this.reproducirSonido(color)
+            this.apagarColor(color)
+        }, 350)
     }
 
     apagarColor(color){
